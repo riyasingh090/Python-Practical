@@ -1,0 +1,251 @@
+# function in python
+
+# A function is a reusable block of code that performs a specific task.
+# It runs when it is called.function in python
+
+# Greeting function
+
+# def greeting(name):
+#     print("Welcome,", name)
+
+# student_name = input("Enter student's name: ")
+# greeting(student_name)
+
+# Additional function
+
+# def addition(a, b):
+#     return a + b
+
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+
+# result = addition(num1, num2)
+# print("Sum =", result)
+
+# Even or Odd
+
+# def even_odd(num):
+#     if num % 2 == 0:
+#         return "Even"
+#     else:
+#         return "Odd"
+
+# number = int(input("Enter an integer: "))
+
+# result = even_odd(number)
+# print("The number is", result)
+
+# Factorial Calculator
+
+# def factorial(n):
+#     fact = 1
+
+#     for i in range(1, n + 1):
+#         fact = fact * i
+
+#     return fact
+
+
+# number = int(input("Enter a non-negative integer: "))
+
+# if number < 0:
+#     print("Factorial is not defined for negative numbers")
+# else:
+#     result = factorial(number)
+#     print("Factorial =", result)
+
+# Largest of three numbers
+
+# def largest(a, b, c):
+#     if a >= b and a >= c:
+#         return a
+#     elif b >= a and b >= c:
+#         return b
+#     else:
+#         return c
+
+
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))
+# num3 = int(input("Enter third number: "))
+
+# result = largest(num1, num2, num3)
+# print("Largest number =", result)
+
+# Grade Calculator
+
+# def grade_calculator(marks):
+#     if marks >= 90:
+#         return "A"
+#     elif marks >= 75:
+#         return "B"
+#     elif marks >= 60:
+#         return "C"
+#     elif marks >= 40:
+#         return "D"
+#     else:
+#         return "Fail"
+
+
+# marks = int(input("Enter your marks (0-100): "))
+
+# if 0 <= marks <= 100:
+#     grade = grade_calculator(marks)
+#     print("Your grade is:", grade)
+# else:
+#     print("Invalid marks! Enter marks between 0 and 100.")
+
+# List Statistics
+
+# def calculate_total(numbers):
+#     return sum(numbers)
+
+
+# def calculate_average(numbers):
+#     return sum(numbers) / len(numbers)
+
+
+# def find_minimum(numbers):
+#     return min(numbers)
+
+
+# def find_maximum(numbers):
+#     return max(numbers)
+
+
+# numbers = [10, 20, 30, 40, 50]
+
+# print("List:", numbers)
+# print("Total =", calculate_total(numbers))
+# print("Average =", calculate_average(numbers))
+# print("Minimum =", find_minimum(numbers))
+# print("Maximum =", find_maximum(numbers))
+
+# Banking Application
+
+# balance = 0
+
+# def deposit(amount):
+#     global balance
+#     if amount > 0:
+#         balance += amount
+#         print("Amount deposited successfully.")
+#     else:
+#         print("Enter a valid amount.")
+
+# def withdraw(amount):
+#     global balance
+#     if amount <= 0:
+#         print("Enter a valid amount.")
+#     elif amount <= balance:
+#         balance -= amount
+#         print("Amount withdrawn successfully.")
+#     else:
+#         print("Insufficient balance.")
+
+# def display_balance():
+#     print("Current balance =", balance)
+
+# while True:
+#     print("\n Banking Menu")
+#     print("1. Deposit")
+#     print("2. Withdraw")
+#     print("3. Display Balance")
+#     print("4. Exit")
+
+#     choice = input("Enter your choice: ")
+
+#     if choice == "1":
+#         amount = float(input("Enter deposit amount: "))
+#         deposit(amount)
+
+#     elif choice == "2":
+#         amount = float(input("Enter withdrawal amount: "))
+#         withdraw(amount)
+
+#     elif choice == "3":
+#         display_balance()
+
+#     elif choice == "4":
+#         print("Thank you for using our banking application.")
+#         break
+
+#     else:
+#         print("Invalid choice. Please try again.")
+
+# # student record processure
+
+# # students = [
+# #     {"name": "Riya", "marks": 85},
+# #     {"name": "Khushi", "marks": 72},
+# #     {"name": "Priya", "marks": 35},
+# #     {"name": "Princy", "marks": 90},
+# #     {"name": "Aman", "marks": 28}
+# # ]
+
+# # def calculate_average(students):
+# #     total = 0
+
+# #     for student in students:
+# #         total += student["marks"]
+
+# #     return total / len(students)
+
+
+# # def passing_students(students):
+# #     print("\nPassing Students:")
+
+# #     for student in students:
+# #         if student["marks"] >= 40:
+# #             print(student["name"], "-", student["marks"])
+
+
+# # print("Average Marks =", calculate_average(students))
+# # passing_students(students)
+
+
+# Directory Information 
+
+import os
+
+# print("Current Working Directory:", os.getcwd())
+
+# print("Files and Folders:")
+# print(os.listdir())
+
+
+# # File existence using pathlib
+
+# from pathlib import Path
+
+# filename = input("Enter filename: ")
+# file_path = Path(filename)
+
+# if file_path.exists():
+#     print("File exists.")
+# else:
+#     print("File does not exist.")
+
+# Create Nested Folder
+
+# from pathlib import Path
+
+# folder = Path("College/Students/AIPA")
+# folder.mkdir(parents=True, exist_ok=True)
+
+# print("Folders created successfully.") 
+
+# Safe Division Calculator
+
+# try:
+#     a = float(input("Enter first number: "))
+#     b = float(input("Enter second number: "))
+#     result = a / b
+#     print("Result:", result)
+
+# except ValueError:
+#     print("Invalid input! Enter numbers only.")
+
+# except ZeroDivisionError:
+#     print("Error! Division by zero is not allowed.")
+
